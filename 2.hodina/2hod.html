@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>planety</title>
+        <style>
+            .planety {
+                height: 100px;
+                display: block;
+                position: absolute; /* position absolute je aby se absolutne nerespektovali obrazky navzajem */
+            }
+            #mars {
+                left: 375px;
+                top: 475px;
+                height: 80px;
+            }
+            #venuse {
+                right: 350px;
+                top: 240px;
+            }
+            #zeme {
+                right: 390px;
+                height: 50px;
+            }
+            #saturn {
+                right: 600px;
+                top: 550px;
+            }
+            #slunce {
+                height: 150px;
+            }
+            body {
+                background-color: black;
+            }
+            .wrapper {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #orbit1 {
+                border: 1px solid white;
+                border-radius: 60%;
+                height: 300px;
+                aspect-ratio: 3/1;
+            }
+            #orbit2 {
+                border: 1px solid white;
+                border-radius: 60%;
+                height: 400px;
+                aspect-ratio: 3/1;
+            }
+            #orbit3 {
+                border: 1px solid white;
+                border-radius: 60%;
+                height: 500px;
+                aspect-ratio: 3/1;
+            }
+            #orbit4 {
+                border: 1px solid white;
+                border-radius: 60%;
+                height: 600px;
+                aspect-ratio: 3/1;
+            }
+            .orbit {
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="orbit1" class="orbit"></div>
+            <div id="orbit2" class="orbit"></div>
+            <div id="orbit3" class="orbit"></div>
+            <div id="orbit4" class="orbit"></div>
+            <img id="slunce" class="planety" src="sun.svg" alt="slunce" />
+            <img id="zeme" class="planety" src="earth.svg" alt="zeme" />
+            <img id="venuse" class="planety" src="venus.svg" alt="venuse" />
+            <img id="saturn" class="planety" src="mercury.svg" alt="saturn" />
+            <img id="mars" class="planety" src="mars.svg" alt="mars" />
+        </div>
+    </body>
+</html>

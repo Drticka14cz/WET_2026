@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  
+  .baby {
+    width: 300px;
+    background:linear-gradient(to right,rgb(40, 127, 226), rgb(30, 144, 182));
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+  }
+
+
+  
+  .h2 {
+    margin-bottom: 10px;
+  }
+  
+  .p {
+    margin-bottom: 20px;
+  }
+  
+  .cde {
+    margin-right: 5px;
+  }
+
+  
+  
+  .ASD {
+    background-color: rgb(58, 124, 223);
+    border-width: 2px;
+    color: white;
+    border-color:white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }

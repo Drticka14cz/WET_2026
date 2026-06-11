@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaci ukol Štěpánek</title>
+</head>
+<body>
+
+    <button id="but">Generuj číslo</button>
+    
+    <script>
+/*1. cviceni - nahodne generovane cisla od 1 do 10, udela prumer a vypise */
+let soucet = 0
+let pocet = 0
+
+let prumer = 0
+soucet *= 1
+prumer *= 1
+pocet *= 1/* prenasobeni kvuli neschopnosti programu :D*/
+let tlacitko = document.querySelector("#but")
+tlacitko.addEventListener("click",gen)/*kdyz uzivatel stiskne tlacitko tak zacne funkce  */
+alert(tlacitko) /*kontrola funkčnosti :D(program mi nefungoval) */
+function gen(){
+    let promenna = Math.floor(Math.random()*10) /* generovani nahodneho cisla*/
+    alert("promenna je"+" " + promenna)
+    pocet = pocet + 1 /*pocet cislic - kolika budem delit abychom dostali prumer */
+    alert("pocet je"+" " + pocet)
+    soucet = soucet + promenna /* celkovy soucet cislic*/
+    alert("soucet je"+" " + soucet)
+    prumer = soucet/pocet /* finální výpočet*/
+    alert("Průměr je"+ " "+ prumer)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

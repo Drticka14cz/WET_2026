@@ -1,0 +1,49 @@
+/*pseudotřídy - značíme jednou dvojtečkou */
+a:link{ /* nenavštívený*/
+    background-color: red;
+}
+a:visited{ /* navšívený odkaz*/
+    background-color: aqua;
+}
+a:hover{ /* když mířim na odkaz*/
+    background-color: green;
+}
+a:active{/* když klidnem a držíme */
+    background-color: azure;
+}
+li:nth-child(2n){ /*2n je každý druhý */
+    background-color: yellow;
+}
+li:nth-child(2n+1){ /*2n+1 jsou liché*/
+    background-color: brown;
+}
+p:first-child{ /* první <p> - musí být celé v <div> asi */
+    background-color: blanchedalmond;
+
+}
+p:last-child{ /* poslední <p>  */
+    background-color: aquamarine;
+}
+ /*pseudoelementy, píšou se dvě : a používají se na úpravu specifických částí daného elementu */
+ li::before{
+    content:"👌"/*win + . */ ;
+ }
+ li::after{
+    content: "👍"; 
+ }
+    
+ p::first-letter{
+    font-size: 20px;
+
+ }
+ p::first-line{
+    background-color:rgb(90, 116, 138) ;
+ }
+ li::marker{
+    color: blue;
+ }
+ p::selection{
+    color: red;
+    background-color: blue;
+ }
+ 

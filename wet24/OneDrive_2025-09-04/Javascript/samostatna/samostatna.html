@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samostatna 2</title>
+</head>
+<body>
+    <br><a>Generuj mi věštbu</a>
+    <input type="submit" id="pokracuj">
+    <br><a id="text"></a>
+    <script>
+    let text = document.getElementById("text")
+     let a = document.getElementById("pokracuj")
+     a.addEventListener("click", funkce)
+     function funkce(){
+        promenna = Math.floor(Math.random() * 5) + 1 
+        if(promenna === 1){
+            text.textContent = ("martin není chytrý člověk")
+        }
+        if(promenna === 2){
+            text.textContent = ("martin je chytrý člověk")
+        }
+        if(promenna === 3){
+            text.textContent = ("martin možná je chytrý člověk")
+        }
+        if(promenna === 4){
+            text.textContent = ("martin není člověk")
+        }
+        if(promenna === 5){
+            text.textContent = ("martin je člověk")
+        }
+     }
+     
+    </script>
+</body>
+</html>

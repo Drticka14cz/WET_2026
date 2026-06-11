@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Větrný mlýn</title>
+        <style>
+            .spodek {
+                height: 500px;
+                width: 100px;
+                background-color: wheat;
+                border: 10px solid black;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+                position: absolute;
+                top: 50px;
+                left: 100px;
+            }
+            .vrch {
+                position: absolute;
+                width: 250px;
+                aspect-ratio: 1/1;
+                left: 35px;
+                transition: rotate 2000s linear;
+            }
+            .vrch:hover {
+                rotate: 1000000deg;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="spodek"></div>
+            <img src="close.png" alt="" class="vrch" />
+        </div>
+    </body>
+</html>

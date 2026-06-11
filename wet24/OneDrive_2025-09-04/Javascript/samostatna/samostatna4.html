@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samostatna 1</title>
+</head>
+<body>
+    <input type="submit" id="pokracuj">
+    <label for="text">text</label>
+<input type="text" id="text" placeholder="zadejte text pro změnu"> 
+<a id="text">a</a>
+<script>
+
+
+let id = document.getElementById("pokracuj")
+
+
+id.addEventListener("click", funkce)
+function funkce(){
+    let text = document.getElementById("text")
+    let pole = text.value.split("")
+    alert(pole)
+    //let promenna = Math.floor(Math.random() * pole.lenght) 
+    /*let promenna = pole.length
+    let promenna2 = math.floor(promenna / 2)*/
+    pole[0] = "1"
+    pole[pole.length] = "3"
+    pole[math.floor(pole.length/2 )] = "2"
+    alert(pole)//nefunguje nic
+}
+alert(pole)
+
+  /*let text = document.getElementById("text");
+    let id = document.getElementById("pokracuj");
+    let vystup = document.getElementById("vystup");
+
+    id.addEventListener("click", funkce);
+
+    function funkce(){
+      let hodnota = text.value;
+      alert(hodnota);
+
+      let pole = [0, 0, 0];
+      let delka = pole.length;
+      let stred = Math.floor(delka / 2);
+      pole[0] = 1;
+      pole[delka - 1] = 3;
+      pole[stred] = 2;
+
+      vystup.textContent = hodnota + " " + pole.join("");
+    }
+*/
+//chat
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test z JS</title>
+</head>
+<body>
+
+
+
+<script>
+
+let uzivatel = Number(prompt("Zadej číslo")); // Definujeme uzivatel
+let vysledek = 1;
+let a = 0;
+let i = 2;
+
+do {
+    if (uzivatel % i === 0) {
+        while (uzivatel % i === 0) {
+            uzivatel = uzivatel / i;
+            vysledek = i + " *" + vysledek;
+            alert(vysledek + " asi to funguje");
+        }
+    }
+
+    if (uzivatel % i !== 0) {
+        if (i === 2) {
+            i = 3;
+        } else {
+            i += 2;
+        }
+        alert("přičítám");
+    }
+
+    if (uzivatel === 1) {
+        alert("neco nefacha");
+        a = 1; // Aby se cyklus ukončil
+    }
+} while (a < 1);
+
+alert(vysledek + "b");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*rozklad na prvnočísla -  2 3 5 7  */ /*
+let uzivatel = window.prompt("zadej číslo k rozkladu na prvnočísla")
+uzivatel = uzivatel *1
+
+/*for( let i = 2; uzivatel % 2; uzivatel = uzivatel % 2 ){ /* forcyklus dělení dvěma - dokud jde bude se dělit*//*
+alert("teste")
+
+}*/ /*
+alert(uzivatel)
+
+
+do{
+    let vysledek = 0
+    let a = 0
+    let i = 2
+    if(uzivatel % i === 0){
+    while(uzivatel % i === 0){
+        uzivatel = uzivatel / i
+        vysledek = i
+        alert( vysledek + " asi to funguje")
+      }
+     if( uzivatel % i !== 0){
+        if( i === 2){
+        i = 3
+        alert("pricitam")
+        }
+        else{
+            i = i + 2
+            alert("pricitam")
+        }
+    }
+    
+    }
+    if(uzivatel === 1){
+        alert("neco nefacha")
+        a = a + 1
+    }
+    
+   
+
+  }while( a < 0)alert(vysledek + "b")
+    
+
+
+
+/*for( i = 2; uzivatel%i === 0; i++){ /*kdyz nebude delitelne dvema tak se prida cislo na rozklad, nestihl jsem to dodelat, puvodni verze s if mi nefungovala, stejne jako tahle - nehází mi to alerty  */
+    /*uzivatel = uzivatel / i
+    let promenna = vysledek
+    
+    alert(vysledek)*/
+
+
+/*
+do{
+    alert("dostal jsem se do do")
+    let mezisoucet = 0
+    let konec = 0
+    if (uzivatel % 2 === 0){
+    uzivatel = uzivatel / 2
+    mezisoucet = mezisoučet +" * " + 2
+    alert("dva")
+    alert(mezisoucet)
+    if( uzivatel === 1)
+    konec = konec + 1
+    alert("1")
+}
+
+    if (uzivatel % 3 === 0){
+    uzivatel = uzivatel / 3
+    mezisoucet = mezisoučet +" * " + 3
+    alert("tri")
+    if( uzivatel === 1)
+    konec = konec + 1
+    alert("1")
+
+}
+
+    if (uzivatel % 5 === 0){
+    uzivatel = uzivatel / 5
+    mezisoucet = mezisoučet +" * " + 5
+    alert("pet")
+    if( uzivatel === 1)
+    konec = konec + 1
+    alert("1")
+}
+
+    if (uzivatel % 7 === 0){
+    uzivatel = uzivatel / 7
+    mezisoucet = mezisoučet +" * " + 7
+    alert("sedum")
+    if( uzivatel === 1)
+    konec = konec + 1
+    alert("1")
+
+}
+ if (uzivatel % uzivatel === 0){ /*pokus o neco jako ve forcyklu *//*
+    uzivatel = uzivatel / uzivatel
+    mezisoucet = mezisoučet +" * " + uzivatel
+    if( uzivatel === 1)
+    konec = konec + 1
+    alert("1")
+}  
+if(konec > 1){
+    alert("měl by být konec")
+}
+else{
+    konec = konec + 1
+    alert("nefunguje")
+}
+}while(konec > 0){
+    alert(mezisoucet) /*vysledny rozklad *//*
+}
+*/
+
+/*
+let cislo = window.prompt("zadej číslo")
+for( let i = 2; i <= cislo; i++){
+    let isPrime = true;
+    for( let j = 2; j < i; j++){
+        if(i%j === 0){
+            isPrime = false
+        }
+
+    }
+if(isPrime){
+    alert(i)
+}
+}
+
+
+
+
+/*if(uzivatel % i == 2){
+alert("funguje")
+}
+else{
+    nefunguje
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

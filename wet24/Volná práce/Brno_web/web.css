@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+}
+.bar{
+    background-color: red;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    flex: auto;
+    /*padding-right: 100px;*/
+    border: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.div1{
+    display: flex;
+    flex: 1;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    font-size: smaller;
+    overflow: hidden;
+    position: relative;
+    }
+
+.spec1::before{
+    content: "";
+    z-index: -1;
+    opacity: 0;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(../Brno_web/Brno_foto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+    position: absolute;
+}
+.spec1:hover::before{
+       opacity: 1;
+       
+ }
+ .spec2::before{
+    content: "";
+    z-index: -1;
+    opacity: 0;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(../Brno_web/Konec.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+    position: absolute;
+}
+.spec2:hover::before{
+       opacity: 1;
+      
+       
+ }
+ .spec1 span.pak1{
+  display: none;
+ }
+.spec1:hover .div1text span.origo1{
+    
+  display: none;
+  
+}
+.spec1:hover .div1text span.pak1{
+    transition: 1s;
+    display: flex;
+    opacity: 1;
+   color: black;
+   font-weight: 500;
+   font-size: 2em;
+   background-color: rgba(255, 255, 255, 0.35);
+}
+.div1 a.div1text {
+        display:flex;
+        height: 100%;
+        width: 100%;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+    }
+.logo{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid gray;
+        justify-content: center;
+        align-items: center;
+    }
+.logovlogo{
+        width: 50px;
+        height: 50px;
+        z-index: 2;
+    }
+  
+    
+    
+.nadpis{
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+.podnadpis{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        text-align: center;
+    }
+ .button1{
+        margin-left: 50px;
+
+    }
+ .textvtip{
+        margin-left: 50px;
+        display: none;
+
+       /* text-decoration: line-through;*/
+    }
+
+    /*nav span{
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(45deg, #194b4f, #33fffc);
+        border-radius: 0px;
+        transition: 0.5s;
+        z-index: 1;
+    
+    }
+   
+    nav .div1:nth-child(0):hover~span{
+        left: 50px;
+    }
+    nav .div1:nth-child(1):hover~span{
+        left: 150px;
+    }
+    nav .div1:nth-child(2):hover~span{
+        left: 90px;
+    }
+    nav .div1:nth-child(3):hover~span{
+        left: 180px;
+    }
+    nav .div1:nth-child(4):hover~span{
+        left: 275px;
+    }
+    nav .div1:nth-child(5):hover~span{
+        left: 380px;
+    }
+
+    -*/

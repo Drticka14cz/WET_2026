@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Moderní CSS</title>
+        <style>
+            @property --angle {
+                syntax: "<angle>";
+                inherits: false;
+                initial-value: 0deg;
+            }
+            * {
+                margin: 0;
+                box-sizing: border-box;
+                /* Basic nastavení - reset CSS */
+            }
+            body {
+                font: 1rem;
+                color: oklab(93.8% 0.00735 -0.02594);
+                background: radial-gradient(circle at 50% 0, #1a1030, #08080f);
+            }
+            section {
+                min-height: 100vh;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                padding: 8vw;
+                gap: 1rem;
+            }
+            h1 {
+                font-size: clamp(2.5rem, 9vw, 7rem);
+                font-weight: 800;
+                background: conic-gradient(from var(--angle), lime, #f0f, #0ff);
+                color: transparent;
+                background-clip: text;
+                animation: color 2s linear infinite;
+            }
+            @keyframes color {
+                100% {
+                    --angle: 360deg;
+                }
+            }
+            .card {
+                background: white;
+                border: 1px solid white;
+                border-radius: 20px;
+                padding: 2rem;
+                max-width: 540px;
+                animation: start linear both;
+                animation-timeline: view();
+                animation-range: entry 5% cover 8%;
+            }
+            @keyframes start {
+                0% {
+                    opacity: 0;
+                    translate: 0 80px;
+                    scale: 0.85;
+                    filter: blur(5px);
+                }
+            }
+            .progress-bar {
+                position: fixed;
+                inset: 0 0 auto;
+                height: 5px;
+                z-index: 100;
+                background: linear-gradient(90deg, #f0f, #ff0);
+                transform: scaleX(0);
+                transform-origin: 0;
+                animation: prograss linear;
+                animation-timeline: scroll(root);
+            }
+            @keyframes prograss {
+                100% {
+                    transform: scalex(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="progress-bar"></div>
+        <section>
+            <h1>Ukázka CSS</h1>
+        </section>
+        <section>
+            <div class="gamut"></div>
+        </section>
+        <section>
+            <div class="card">
+                <input type="radio" />
+                <input type="radio" />
+                <input type="radio" />
+            </div>
+            <div class="card">
+                <h2>LOOOOOREEEEEM</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nesciunt earum repudiandae numquam fuga provident commodi
+                    est omnis quidem, debitis vero deserunt in minima delectus
+                    atque ducimus neque quod velit soluta!
+                </p>
+            </div>
+            <div class="card">
+                <h2>LOOOOOREEEEEM</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nesciunt earum repudiandae numquam fuga provident commodi
+                    est omnis quidem, debitis vero deserunt in minima delectus
+                    atque ducimus neque quod velit soluta!
+                </p>
+            </div>
+            <div class="card">
+                <h2>LOOOOOREEEEEM</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nesciunt earum repudiandae numquam fuga provident commodi
+                    est omnis quidem, debitis vero deserunt in minima delectus
+                    atque ducimus neque quod velit soluta!
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

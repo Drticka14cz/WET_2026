@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domácí úkol druhá část Štěpánek</title>
+</head>
+<body>
+    <script>
+
+let vyber = window.prompt("zadej slovo scitani pro sčítání nebo slovo nasobeni pro násobení")/* uzivatel si vybere co chce po programu*/
+alert(vyber)
+if(vyber === "scitani"){
+    let promenna = 0 /*sem se bude propisovat co uzivatel napise*/
+    let vypocet = 0 /* celkovy soucet*/
+    do{
+        promenna = window.prompt("zadej hodnotu")
+        promenna *=1
+        /*alert(promenna)*/
+        vypocet = vypocet + promenna
+        /*alert(vypocet)*/
+    }while(promenna !==0) /*konec cyklu*/
+    alert("Součet je"+" " +vypocet)
+}
+
+
+else if(vyber === "nasobeni"){ /* nasobeni*/
+    let promenna = 0 /*sem se bude propisovat co uzivatel napise*/
+    let vypocet = 1 /* celkovy soucet*/
+    do{
+        promenna = window.prompt("zadej hodnotu")
+            promenna *=1
+        /*alert(promenna)*/
+        if(promenna !==0){ /* ochrana aby se vysledek neprenasobil nulou*/
+            vypocet = vypocet * promenna
+        /*alert(vypocet)*/
+        }
+    }while(promenna !==0)
+    alert("Výsledek je" +" "+ vypocet)
+}
+ else{
+    alert("Nefunguje")/*pro případ že by uživatel neuměl napsat A nebo B */
+ }
+   
+     
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

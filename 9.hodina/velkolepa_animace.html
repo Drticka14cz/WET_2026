@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Velkolepá animace</title>
+        <style>
+            .vesmír {
+                background-color: black;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .mars {
+                background-color: orange;
+                aspect-ratio: 1/1;
+                height: 40px;
+                position: relative;
+                top: 600px;
+                border-radius: 50%;
+            }
+            .mesic {
+                background-color: gray;
+                aspect-ratio: 1/1;
+                height: 20px;
+                top: 12px;
+                left: 65px;
+                position: relative;
+                border-radius: 50%;
+            }
+            .zeme {
+                background-color: green;
+                aspect-ratio: 1/1;
+                height: 80px;
+                border-radius: 50%;
+                top: 50%;
+                translate: 0 -50%;
+                position: absolute;
+            }
+            .slunce {
+                background-color: yellow;
+                aspect-ratio: 1/1;
+                height: 200px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+            .orbita_marsu {
+                aspect-ratio: 1/1;
+                height: 1200px;
+                border-radius: 50%;
+                /* border-bottom: rgb(235, 235, 235) solid 2px;
+                border-left: transparent solid 2px; */
+                border: 2px solid green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+            }
+            .rotace_marsu {
+                animation: rotace_marsu linear infinite 65s;
+            }
+            .rotace_zeme {
+                animation: rotace_zeme linear infinite 40s;
+            }
+            .rotace_mesice {
+                animation: rotace_mesice linear infinite 20s;
+            }
+            .orbita_mesice {
+                aspect-ratio: 1/1;
+                height: 800px;
+                border-radius: 50%;
+                border-top: rgb(128, 151, 152) solid 2px;
+                border-right: transparent solid 2px;
+                /* border: 2px solid red; */
+                position: relative;
+                /* transform: rotate(-60deg); */
+            }
+            .orbita_zeme {
+                aspect-ratio: 1/1;
+                height: 200px;
+                border-radius: 50%;
+                border-top: rgb(128, 151, 152) solid 2px;
+                border-right: transparent solid 2px;
+                /* border: rgb(24, 62, 7) solid 2px; */
+                /* border: 2px solid yellow; */
+                position: relative;
+                left: 85%;
+                translate: -50%;
+                top: 11px;
+                display: flex;
+                justify-content: top;
+                align-items: center;
+                flex-direction: column;
+            }
+            @keyframes rotace_marsu {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotace_zeme {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotace_mesice {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="vesmír">
+            <div class="orbita_marsu rotace_marsu">
+                <div class="mars"></div>
+            </div>
+            <div class="orbita_mesice rotace_zeme">
+                <div class="orbita_zeme rotace_mesice">
+                    <div class="mesic"></div>
+                    <div class="zeme"></div>
+                </div>
+            </div>
+            <div class="slunce"></div>
+        </div>
+        <script>
+            const slunko = document.querySelector(".slunce");
+            const mars = document.querySelector(".rotace_marsu");
+            const zeme = document.querySelector(".rotace_zeme");
+            const mesic = document.querySelector(".rotace_mesice");
+            slunko.addEventListener("click", function () {
+                mars.classList.toggle("rotace_marsu");
+                zeme.classList.toggle("rotace_zeme");
+                mesic.classList.toggle("rotace_mesice");
+            });
+        </script>
+    </body>
+</html>

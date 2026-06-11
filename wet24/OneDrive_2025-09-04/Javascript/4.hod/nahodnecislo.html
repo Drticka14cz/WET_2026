@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahodne cislo</title>
+</head>
+<body>
+    
+    
+
+
+
+    <script>
+        let cislo = Math.floor(Math.random()*10)
+
+    alert(cislo)
+   let hadej = window.prompt("hádej číslo od 1 do 10") 
+   hadej = hadej * 1
+    while(hadej !== cislo){
+    alert("kus to znovu")
+    let hadej = window.prompt("hádej číslo od 1 do 10")
+ }
+        alert("správně, bylo to" + cislo)
+    </script>
+</body>
+</html>

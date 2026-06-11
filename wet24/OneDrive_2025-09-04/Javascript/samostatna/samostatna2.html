@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samostatna2</title>
+</head>
+<body>
+
+    <label for="Jméno">Jméno</label>
+<input type="text" id="Jméno" placeholder="Vaše jméno"> 
+
+<label for="trida">třída</label>
+<input type="text" id="trida" placeholder="vaše třída"> 
+
+<label for="skola">škola</label>
+<input type="text" id="skola" placeholder="vaše škola"> 
+
+    <input type="submit" id="pokracuj">
+   <br>
+   <a id="text"></a>
+
+    <script>
+    
+    let text = document.getElementById("text");
+    let a = document.getElementById("pokracuj");  
+    let skola = document.getElementById("skola");
+    let jmeno = document.getElementById("Jméno");
+    let trida = document.getElementById("trida");
+   
+    a.addEventListener("click", priklad)
+    function priklad(){
+        text.textContent = (" nejlepší škola je " + skola.value + " v ní je nejlepší třída " + trida.value + " a nejhorší student je " + jmeno.value);
+       
+    }
+    </script>
+</body>
+</html>

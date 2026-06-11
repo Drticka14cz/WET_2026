@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>loading</title>
+        <style>
+            body {
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                gap: 100px;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            .rotace {
+                animation: otaceni 1s linear infinite;
+            }
+            .kolecko {
+                border: 20px solid rgb(122, 115, 115);
+                aspect-ratio: 1/1;
+                height: 500px;
+                border-radius: 100%;
+                border-top: 20px solid orange;
+                /* margin: 100px 0 0 40px; */
+            }
+            @keyframes otaceni {
+                100% {
+                    rotate: 360deg;
+                }
+            }
+            @keyframes stin {
+                100% {
+                    box-shadow: 0 0 50px aqua;
+                }
+            }
+            .ctverec {
+                aspect-ratio: 1/1;
+                height: 200px;
+                background: linear-gradient(25deg, red, blue);
+                border: orange solid 1px;
+                box-shadow: 0px 0px 200px red;
+                animation: stin 5s linear infinite alternate;
+            }
+            .text_animace {
+                color: orange;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                    sans-serif;
+            }
+            .text_animace::before {
+                content: "";
+                background: linear-gradient(
+                    90deg,
+                    transparent 0%,
+                    black 5%,
+                    black 100%
+                );
+                position: absolute;
+                width: 120%;
+                height: 100%;
+                left: 110%;
+                animation: hoidin 3s linear forwards infinite;
+            }
+            @keyframes hoidin {
+                100% {
+                    left: -20%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="kolecko rotace"></div>
+        <div class="ctverec"></div>
+        <div><h1 class="text_animace">Text který zmizí.....</h1></div>
+        <script>
+            const kolecko = document.querySelector(".kolecko");
+            kolecko.addEventListener("click", () => {
+                kolecko.classList.toggle("rotace");
+            }); /*=> se používá místo function - jsme moc líní */
+        </script>
+    </body>
+</html>

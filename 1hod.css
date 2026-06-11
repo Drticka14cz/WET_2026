@@ -1,0 +1,21 @@
+body {
+    background-color: aqua;
+    justify-content: center;
+}
+h1 {
+    color: brown;
+    font-size: 64px;
+}
+.div_li {
+    border-style: dotted;
+    border-radius: 10px;
+    border-color: black;
+    padding: 20px;
+}
+#odkaz:hover {
+    color: black;
+}
+#barva {
+    color: blue;
+    background-color: brown;
+}

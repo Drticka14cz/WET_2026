@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsibilita</title>
+    <style>
+        .nadpis{
+            color: aquamarine;
+            /* Clamp nastavuje 3 hodnoty - minimální, optimální a maximální */
+            font-size: clamp(52px, 10vw, 124px);
+        }
+        .ctverec{
+            height: 250px;
+            /* width: 250px; */
+            aspect-ratio: 1/1;
+            border: 1px solid yellowgreen;
+            background-color: firebrick;
+        }
+        .main{
+            border: 2px blue dashed;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+         @media (width < 1023px){
+            .nadpis{
+                color: black;
+            }
+            .main{
+                flex-wrap: wrap;
+            }
+        }
+        @media (width < 768px){
+            .nadpis{
+                color: red;
+            }
+            .main{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 class="nadpis">
+        Toto je responsibilní tenton
+    </h1>
+    <div class="main"
+    ><div class="ctverec"></div>
+    <div class="ctverec"></div>
+    <div class="ctverec"></div>
+    <div class="ctverec"></div>
+</div>
+    <div></div>
+</body>
+</html>

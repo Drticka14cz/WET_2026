@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1.Hodina</title>
+        <link rel="stylesheet" href="1hod.css" />
+    </head>
+    <body id="body">
+        <h1 id="h1">BRNOa</h1>
+        <img src="obrazky/brno_1.webp" height="400" />
+        <div class="div_li">
+            <ol>
+                <li>dwawdwa</li>
+                <li>awd</li>
+                <li>awda</li>
+            </ol>
+        </div>
+
+        <a href="https://www.trebesin.cz/" id="odkaz">Třebešín.cz</a>
+        <br />
+        <button id="but">změň barvu</button>
+        <script>
+            const button = document.querySelector("#but");
+            const pozadi = document.querySelector("#body");
+            const nadpis = document.querySelector("#h1");
+            let x = 0;
+            let pressed = false;
+            button.addEventListener("click", funkce);
+            function funkce() {
+                let y = Math.floor(Math.random() * 6);
+                if (!pressed) {
+                    if (y < 2) {
+                        pozadi.style.backgroundColor = "red";
+                        nadpis.style.fontSize = "128px";
+                    } else if (y < 4) {
+                        pozadi.style.backgroundColor = "green";
+                        nadpis.style.fontSize = "48px";
+                    } else {
+                        pozadi.style.backgroundColor = "Blue";
+                        nadpis.style.fontSize = "256px";
+                    }
+                } else if (pressed) {
+                    body.style.backgroundColor = "white";
+                    nadpis.style.fontSize = "64px";
+                }
+                pressed = !pressed;
+            }
+        </script>
+    </body>
+</html>

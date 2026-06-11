@@ -1,0 +1,17 @@
+
+h1{
+    background: linear-gradient(to left, blue, red);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body{
+   /* background: linear-gradient( blue, red);
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+
+    background-image:url(Andrej\ kohout.jfif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}

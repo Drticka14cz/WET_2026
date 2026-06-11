@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test 22.4 1. uloha</title>
+</head>
+<body>
+    <label for="in">Zadejte slova k rozřazení</label>
+    <input type="text" id="in" placeholder="zadejte slova"> 
+    <a><button class="subsl">Zapsat</button></a>
+    <br><a id="text"></a>
+    <br></r><a><button id="tridit">Třídit</button></a>
+    <br><p>Dlouhá slova jsou: <a id="dlouha"></a></p>
+    <br><p>krátká slova jsou: <a id="kratka"></a></p>
+    
+    <script>  
+        let tridit = document.getElementById("tridit") //button co vytridi pak ty slova
+        let text = document.getElementById("text") // vypisuje ty slova co napisem
+        let button = document.querySelector(".subsl") //potvrzeni tech slov, mysleno ze po kliknutu se to prida do pole v fci
+        let pole = [] //pole
+        let kratkaslova = document.getElementById("kratka") //sem se pak vypisou ty kratka slova do webu
+        let dlouhaslova = document.getElementById("dlouha") // a sem pak ty dlouha
+    
+        button.addEventListener("click", funkce) // kdyz kliknem tak se spusti function funkce
+    
+        function funkce() {
+            let vstup = document.getElementById("in") //sem zadavame my tu hodnotu
+            pole.push(vstup.value) // pridame hodntou do pole
+            text.innerText = pole //vypise text do webu, konkretne to pole
+        }
+    
+        tridit.addEventListener("click", trid)
+        function trid() {
+            let kratka = []
+            let dlouha = []
+
+
+
+            for (let i = 0; i < pole.length; i++){ //for cykl na trizeni slov
+                if (pole[i].length < 4) {
+                    kratka.push(pole[i])
+                } else {
+                    dlouha.push(pole[i])
+                }
+            }
+            dlouhaslova.innerText = dlouha
+            kratkaslova.innerText = kratka //zde to vypisuje ty slova do webu
+            
+        }
+    </script>
+</html>

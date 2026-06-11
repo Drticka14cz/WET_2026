@@ -1,0 +1,57 @@
+.trida1{
+    height: 500px;
+    width: 1500px;
+    background:linear-gradient(to top, tomato, lightpink );
+   display: flex; /* flex to dá na řádek- normálně to je sloupec*/
+   margin:  auto;/* zarovnání všeho na střed*/
+   justify-content: center;/*posouvá po ose X*/
+   column-gap: 100px; /*sloupce - mezera mezi těmi divy*/
+   align-items: center; /* posouvá po ose Y */
+   /*align-content:center ;*/
+  
+}
+body{
+    padding-top: 100px;
+}
+.trida2{
+    width: 250px;
+    height: 250px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    background: linear-gradient(to top left, lightgreen, skyblue);
+    border-radius: 20px;
+    font-size: 21px;
+
+
+    
+}
+.trida3{
+    width: 250px;
+    height: 250px;
+    padding-left: 30px;
+    padding-top: 30px;
+    background: linear-gradient(to right , lightgreen, skyblue);
+    border-radius: 20px;
+    font-size: 21px;
+    padding-right: 30px;
+   background-image: url(../../Obrazky/Hřib\ železný.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+}
+
+
+
+
+
+
+
+
+/*#box2{
+    background: linear-gradient(to right, lightgreen, skyblue);
+}
+#box1{
+    background: linear-gradient(to top left, lightgreen, skyblue);
+}*/

@@ -1,0 +1,9 @@
+.trida{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: sticky /* jako relative + sticked*//*fixed*//*fixed - zůstává na místě jakoby - třeba postraní panel */ /*absolute*/ /*relative*/ /*static*/;
+    /* to left se posune doprava - protože se posouvá z leva*/
+    left: 10%;
+    top: 50%;
+}

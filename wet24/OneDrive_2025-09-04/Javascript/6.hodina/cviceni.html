@@ -1,0 +1,140 @@
+¨<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Procvicovani</title>
+    </head>
+    <body id="body">
+        <button id="but">Změň barvu</button>
+        <script>
+            /*
+let stranaa = window.prompt("zadejte první stranu")
+let stranab = window.prompt("zadejte druhou stranu stranu")
+let obsah = stranaa*stranab
+alert(obsah)
+
+let prvnicislo = window.prompt("zadejte první číslo")
+let druhecislo = window.prompt("zadej druhé číslo")
+prvnicislo = prvnicislo*1
+druhecislo = druhecislo*1
+let a = prvnicislo
+let b = druhecislo
+
+if(a > b){
+    alert(a)
+}
+else if(a < b){
+    alert(b)
+}
+else if(a === b){
+    alert("čísla jsou stejná")
+}
+else{
+    alert("nefachá to")
+}*/
+
+            rand = 0;
+
+            let tlacitko = document.querySelector("#but");
+            let back = document.querySelector("#body");
+            tlacitko.addEventListener("click", priklad);
+            back.addEventListener("click", velikost);
+            function priklad() {
+                let back = document.querySelector("#body");
+                rand = Math.floor(Math.random() * 5);
+                alert(rand);
+                if (rand === 0) {
+                    back.style.backgroundColor = "red";
+                } else if (rand === 1) {
+                    back.style.backgroundColor = "black";
+                } else if (rand === 2) {
+                    back.style.backgroundColor = "white";
+                } else if (rand === 3) {
+                    back.style.backgroundColor = "green";
+                } else if (rand === 4) {
+                    back.style.backgroundColor = "blue";
+                } else if (rand === 5) {
+                    back.style.backgroundColor = "yellow";
+                }
+            }
+
+            function velikost() {}
+            /*
+let k = window.prompt("zadej první číslo")
+let l = window.prompt("zadej druhé číslo")
+k = k*1
+l = l*1
+if(k === 0){
+    if ( l === 0){
+        alert("rovnice má nekonečně mnoho řešení")
+    }
+    else{
+    alert("rovnice nemá řešení")
+}
+}
+else{
+
+l = l*(-1)
+let x = l/k
+alert(x)
+}
+
+*/
+            /*
+let a = window.prompt("zadej hodnotu a");
+let b = window.prompt("zadej hodnotu b");
+let c = window.prompt("zadej hodnotu c");
+a = a*1
+b = b*1
+c *= 1
+
+
+let dis = b*b - 4 * a * c;
+if(dis > 0){
+alert("řešení 1:" + (-b + Math.sqrt(dis))/(2*a) + 
+"\n řešení 2:" + (-b - Math.sqrt(dis))/(2*a )
+)
+
+}else if(dis === 0){
+    alert("řešení 1:" + (-b + Math.sqrt(dis))/(2*a))
+}
+else{
+    alert("rovnice nemá řešení")
+}
+
+*/
+
+            let a = 0;
+            a *= 1;
+            let max = 0;
+            do {
+                a = window.prompt("zadej hodnotu");
+                a *= 1;
+                if (a > max) {
+                    max = a;
+                }
+            } while (a !== 0);
+            alert(max);
+
+            /*
+let cislo = window.prompt("zadej číslo")
+for( let i = 2; i <= cislo; i++){
+    let isPrime = true;
+    for( let j = 2; j < i; j++){
+        if(i%j === 0){
+            isPrime = false
+        }
+
+    }
+if(isPrime){
+    alert(i)
+}
+}
+
+
+
+*/
+        </script>
+    </body>
+</html>

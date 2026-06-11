@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device=width, initial-scale=1.0">
+        <title>Tabulka4.hod</title>
+    </head>
+    <body>
+<table border="1px; " frame="box">
+    <tr>
+        <th>rámečky - w,h sides</th>
+        <th>border, box</th>
+        <th>Hlavička drei</th>
+    </tr>
+    <tr>
+        <td>TD jsou sloupce, TR jsou řádky</td>
+    <td style="width: 3cm; height: 3cm; text-align: center; background-color: red;">1. řádek sloupec 2</td>
+    <td>1. řádek sloupec 3</td>
+
+    </tr>
+    <tr><td>2. řádek 1. sloupec</td>
+        <td style="width: 2cm; height: 1cm; text-align: center; background-color: aqua;">2. řádek sloupec 2</td>
+        <td>2. řádek sloupec 3</td></tr>
+        <tr>
+        <td colspan="2">colspan spojuje řádky</td>
+        <td >3. řádek sloupec 2</td>
+       
+        </tr>
+        <tr> <td rowspan="2">rowspan spojuje sloupce</td></tr>
+        <tr> <td rowspan="2">rowspan spojuje sloupce</td></tr>
+</table>        
+<table border="2px" frame="box">
+
+    <tr>
+       <th>hlava 1</th>
+       <th>hlava 2</th>
+    </tr>
+    <tr> <td>1,1</td>
+        <td>1,2</td>
+    </tr>
+    <tr> <td rowspan="2">2.1</td>
+        <td >2.2</td>
+        <tr>
+            <td>3,2</td></tr>
+    </tr>
+    <tr> <td colspan="2" rowspan="">4,1</td></tr>
+    <tr><td rowspan="-1">5,1</td><td>5,2</td></tr>
+        
+
+</table>
+
+    </body>
